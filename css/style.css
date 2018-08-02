@@ -1,0 +1,96 @@
+/*
+Website Colors
+
+Primary Color (blue):#003580
+Secondary Color(light blue): #009fe3
+Tetiary Color (yellow):#feba02
+Quarternary Color (gray): #66666
+
+Website Font
+Body Text: Montserrat (400,500,700)
+
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height:1.6;
+}
+
+h1 {
+  font-size: 24px;
+  color:#00000;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+h2 {
+  font-size 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* Link Styles */
+
+a {
+  color: #215bff;
+}
+
+a:visited {
+  color: #6990ff;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:active {
+  color: #606264;
+}
+
+div {
+  padding: 16px;
+  margin: 16px;
+}
+
+/* buttons */
+
+.button {
+  border: none;
+  font-family: inherit;
+  background-color: #009fe3; /* light blue */
+  color: white !important;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  border-radius:25px;
+  border-bottom: 2px #0076a8;
+  transition: 0.2s opacity;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.button-secondary {
+  border: solid 2px #003580;
+  color: #003580
+  cursor: pointer;
+  background-color: white;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  cursor: pointer;
+  background-color: #003580;
+  color: white;
+}
