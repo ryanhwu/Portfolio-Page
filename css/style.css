@@ -14,20 +14,16 @@ Body Text: Montserrat (400,500,700)
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: black;
-  font-weight: normal;
+  color: #000000;
+  font-weight: 400;
   line-height:1.6;
   background-color: white;
 }
 
-h1 {
+h1, .h1 {
   font-size: 46px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.4;
-  color:#00000;
-  padding: 20px;
-  text-align: center;
-
 }
 
 h2 {
@@ -40,23 +36,23 @@ h3 {
   font-weight: 400;
 }
 
-h4 {
+h4, .h4 {
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 400;
   font-style: italic;
 }
 
 .graytext {
   color: gray;
   font-size: 14px;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .hero-text {
   font-size: 30px;
   font-weight: bold;
   line-height: 1.4;
-  color: #00000;
+  color: #000000;
   padding: 20px;
   text-align: center;
 }
@@ -88,12 +84,6 @@ a:focus {
 
 a:active {
   color: #606264;
-}
-
-div {
-  padding: 10px;
-  margin: 10px;
-  display: block;
 }
 
 /* buttons */
@@ -130,6 +120,7 @@ div {
   background-color: none;
   color: black;
   text-decoration:none;
+  display: inline-block;
 }
 
 .button-secondary:hover,
@@ -139,81 +130,100 @@ div {
   color: white;
 }
 
-.navigation {
-  list-style-type: none;
-  padding: 10px;
-  float: right;
-}
-
-.navigation > li {
-  display: inline-block;
-  margin-left:  10px;
-}
 
 /* Layout Styling */
 
-.wrapper {
-  display: block;
-  width: 100%;
-  max-width: 1000;
-  margin: 0 auto;
-}
 
-.wrapper-nav {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding:0px 20px;
+header {
   background-color: #14554b;
+  padding: 15px;
 }
 
-.hero {
+nav {
+  display: inline-block;
+  float: right;
+  margin-top: 29px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  float:left;
+  margin-left: 25px;
+}
+
+#hero {
   background: linear-gradient(to right, #27a592 0%, #00ffcc 100%);
   width: auto;
   height: auto;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 120px 0 80px;
   text-align: center;
 }
 
+#hero .h1, #hero .h4 {
+  display: block;
+}
+
+#hero .h1 {
+  padding:30px 0 70px;
+}
+
+#intro {
+  padding: 60px 0;
+}
+
+#work h2 {
+  background-color: #14554b;
+  color: #fff;
+  padding: 30px 0;
+  position: relative;
+}
+
+.triangle:after {
+    position: absolute;
+    content: " ";
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 0.5em #14554b solid;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.5em solid transparent;
+    border-left: 0.5em solid transparent;
+    margin-left: -0.5em;
+}
+
+
+.center {
+  text-align: center;
+}
 .header {
   display: inline-block;
   width: 100%;
   text-align: right;
 }
 
-/* Columns */
-
-.columns-container {
-  white-space: nowrap;
-  font-size: 0;
-}
-
-.column-2 {
-  width:48%;
-  display:inline-block;
-  margin-right:2%;
-  float: left;
-  text-align: center;
-}
-.column-2:last-child {
-  margin-right: 0;
-}
 
 /* Container and Rows */
 
 .container {
-  width: 80%;
-  min-width: 360px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.row-centered {
+#intro .container {
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+}
+
+#work .container {
+  padding-top: 60px;
 }
 
 .row{
@@ -229,19 +239,58 @@ div {
   border-bottom: none;
 }
 
+/* Columns */
+
+.column{
+  width:50%;
+  display:inline-block;
+  float: left;
+  padding: 0 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
 /* Responsive Design */
 
 /* MEDIA */
 
 @media all and (max-width: 767px) {
+
+header img {
+  max-width: 50px;
+}
+
+nav {
+  margin-top: 19px;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+header {
+  padding: 10px 0 4px;
+}
   #hero h1 {
     padding: 36px 0;
     font-size: 28px;
   }
-  .wrapper {
-    padding: 0 10px;
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  .col-2 {
+  .column{
     width: 100%;
-    margin-right: 0;
   }
+  .center-mobile {
+    text-align: center;
+  }
+  }
+
+  @media all and (min-width: 1400px) {
+    .container {
+      max-width: 1350px;
+      }
+    }
