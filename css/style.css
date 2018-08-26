@@ -79,9 +79,8 @@ a:visited {
 
 a:hover,
 a:focus {
-  color:black;
+  color:#efefef;
   text-decoration: none;
-  padding-bottom: 15px;
 }
 
 a:active {
@@ -237,10 +236,19 @@ nav ul li {
   text-align: center;
 }
 
+#footer h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#footer h5 {
+  font-size: 16px;
+  font-weight: normal;
+}
 nav a:hover,
 nav a:focus {
   padding-bottom: 15px;
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid #efefef;
 }
 
 .triangle:after {
@@ -310,6 +318,9 @@ nav a:focus {
   padding: 0 15px;
 }
 
+.logo4 {
+  max-width: 60px;
+}
 img {
   max-width: 100%;
 }
@@ -353,11 +364,11 @@ img {
 @media all and (max-width: 767px) {
 
   header img {
-    max-width: 50px;
+    max-width: 60px;
   }
 
   nav {
-    margin-top: 19px;
+    margin-top: 10px;
   }
 
   nav ul li {
@@ -398,7 +409,7 @@ img {
   }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 575px) {
   header {
     text-align: center;
     display: inline-block;
@@ -406,11 +417,14 @@ img {
   }
   nav {
     float: none;
+    margin-top: 10px;
   }
   nav ul li {
-    margin: 0 10px;
+    margin: 0 20px;
   }
-
+  header .logo {
+  display:block;
+ }
   #hero {
     padding: 20px 0 20px;
   }
