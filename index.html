@@ -8,6 +8,21 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#work").click(function(){
+        $("#containerwork").slideToggle("slow");
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#about-me").click(function(){
+        $("#aboutmecontent").slideToggle("slow");
+    });
+});
+</script>
 </head>
 
 <body>
@@ -43,6 +58,7 @@
 
   <div id="work">
     <h2 class="center triangle">My Work</h2>
+    <div id=containerwork>
     <div class="container">
       <div class="row">
         <div class="column">
@@ -99,9 +115,11 @@
           </div>
         </div>
       </div>
+    </div>
 
       <div id="about-me">
         <h2 class="center triangle">About Me</h2>
+        <div id="aboutmecontent">
         <div class="container center">
           <img src="img/ryanprofilepic.png" alt="ryan wu profile pic">
           <div>
@@ -1048,6 +1066,7 @@
           </svg>
         </div>
       </div>
+    </div>
 
       <footer id="footer">
         <h2>Get in Touch</h2>
@@ -1058,10 +1077,19 @@
         </div>
         <h5 class="center">If you want to collaborate, need some work done or just want to have a quick chat, please get in touch!</h5>
         <div class="center">
-          <a class="button" href="mailto:ryan.wu@fulbrightmail.org">Send me a Mail</a>
+          <form action="mailto:ryanausdeutschland@gmail.com" method="post" enctype="text/plain">
+            Name:<br>
+            <input type="text" name="name"><br> E-mail:
+            <br>
+            <input type="text" name="mail"><br> Your Message:<br>
+            <input type="text" name="comment" class="textbox"><br><br>
+            <input type="submit" value="Send" class="button">
+          </form>
         </div>
-        <p class="smalltext">Website design and content © 2018 Ryan Wu</p>
-      </footer>
-      <script src="js/scripts.js"></script>
-    </body>
-    </html>
+      </section>
+      <p class="smalltext">Website design and content © 2018 Ryan Wu</p>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+  </html>
