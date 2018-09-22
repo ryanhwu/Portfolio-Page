@@ -1,13 +1,10 @@
-console.log("Hello world")
-$(document).ready(function(){
-    $("#work").click(function(){
-        $("#containerwork").slideToggle("slow");
+$(document).on('click'), 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body') .animate({
+        scrolltop: $($.attr(this, 'href')).offset().top
+      }, 1000);
+
     });
-});
-</script>
-<script>
-$(document).ready(function(){
-    $("#about-me").click(function(){
-        $("#aboutmecontent").slideToggle("slow");
-    });
-});
+
+      });
