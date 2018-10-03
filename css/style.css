@@ -183,7 +183,7 @@ nav ul li {
 }
 
 #hero {
-  background: url(../img/herobanner.png) no-repeat;
+  background: url('../img/herobanner.png') no-repeat;
   background-size: cover;
   margin: 0 auto;
   padding: 190px 0 250px;
