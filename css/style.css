@@ -183,7 +183,7 @@ nav ul li {
 }
 
 #hero {
-  background: url(../img/artboard.jpg) no-repeat;
+  background: url('https://github.com/ryanhwu/Portfolio-website/blob/master/img/Artboard.jpg') no-repeat;
   background-size: cover;
   margin: 0 auto;
   padding: 175px 0 220px;
